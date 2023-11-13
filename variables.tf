@@ -16,13 +16,3 @@ variable "auth" {
         url = "https://infra.mail.ru:35357/v3/"
     })
 }
-
-variable "s3" {
-    type = object({
-        bucket = string
-        key = string
-        access_key = string
-        secret_key = string
-        region = string
-    })
-}
