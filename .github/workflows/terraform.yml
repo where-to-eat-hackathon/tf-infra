@@ -9,10 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TERRAFORM_RC: "${{ secrets.TERRAFORM_RC }}"
-
-      TF_VAR_auth_username: ${{ secrets.TF_VAR_AUTH_USERNAME }}
-      TF_VAR_auth_password: ${{ secrets.TF_VAR_AUTH_PASSWORD }}
-      TF_VAR_auth_project_id: ${{ secrets.TF_VAR_AUTH_PROJECT_ID }}
+      TF_VAR_auth: ${{ secrets.TF_VAR_AUTH }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
