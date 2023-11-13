@@ -11,7 +11,6 @@ data "vkcs_kubernetes_clustertemplate" "k8s-template" {
 }
 
 resource "vkcs_kubernetes_cluster" "k8s-cluster" {
-
   depends_on = [
     vkcs_networking_router_interface.k8s,
   ]
@@ -25,11 +24,6 @@ resource "vkcs_kubernetes_cluster" "k8s-cluster" {
   availability_zone   = "GZ1"
 
   floating_ip_enabled = true
-
-  labels = {
-    docker_registry_enabled = true
-  }
-
 }
 
 resource "vkcs_kubernetes_node_group" "k8s-node-group" {
